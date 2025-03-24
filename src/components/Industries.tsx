@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Beaker, Warehouse, Building2 } from 'lucide-react';
 
 const industries = [
