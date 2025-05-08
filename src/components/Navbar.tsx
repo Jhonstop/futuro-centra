@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ShoppingBag, Box, Wallet, Server } from 'lucide-react';
+import { Menu, X, ShoppingBag, Box, Wallet, Server, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -77,6 +77,17 @@ const Navbar = () => {
           </Button>
           
           <Button 
+            variant="ghost"
+            className="text-centra-blue-primary hover:bg-centra-blue-primary/5"
+            asChild
+          >
+            <Link to="/register-company" className="flex items-center">
+              <Users className="mr-2 h-4 w-4" />
+              Cadastrar Empresas
+            </Link>
+          </Button>
+          
+          <Button 
             className="bg-gradient-to-r from-centra-blue-primary to-centra-blue-secondary text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
             asChild
           >
@@ -137,6 +148,15 @@ const Navbar = () => {
               >
                 <Server className="mr-2 h-4 w-4" />
                 Sistema
+              </Link>
+              
+              <Link 
+                to="/register-company"
+                className="text-centra-dark font-medium py-2 hover:text-centra-blue-primary transition-colors flex items-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Users className="mr-2 h-4 w-4" />
+                Cadastrar Empresas
               </Link>
               
               <Button 

@@ -13,6 +13,7 @@ import SellersAITraining from "./pages/supplier/SellersAITraining";
 import ProductDetail from "./pages/ProductDetail";
 import CentraPay from "./pages/CentraPay";
 import ErpSystem from "./pages/ErpSystem";
+import CompanyRegistration from "./pages/CompanyRegistration";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/supplier/sellers-ai" element={<SellersAITraining />} />
           <Route path="/centrapay" element={<CentraPay />} />
           <Route path="/erp" element={<ErpSystem />} />
+          <Route path="/register-company" element={<CompanyRegistration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
